@@ -1,4 +1,7 @@
+import 'package:finance_app/Features/card/person_card.dart';
 import 'package:finance_app/Features/home_page/home_page.dart';
+import 'package:finance_app/Features/add_cards/add_page.dart';
+import 'package:finance_app/Features/person_card/person.dart';
 import 'package:finance_app/Features/statstics/statistics_screen.dart';
 import 'package:finance_app/core/Styling/app_colors.dart';
 import 'package:flutter/material.dart';
@@ -15,22 +18,10 @@ class _MainScreenState extends State<MainScreen> {
   int currentIndix = 0;
   List<Widget> screens = [
     HomePageScreen(),
-  StatisticsScreen(),
-    Container(
-      width: double.infinity,
-      height: double.infinity,
-      color: Colors.yellow,
-    ),
-    Container(
-      width: double.infinity,
-      height: double.infinity,
-      color: Colors.green,
-    ),
-    Container(
-      width: double.infinity,
-      height: double.infinity,
-      color: Colors.brown,
-    ),
+    StatisticsScreen(),
+    AddPage(),
+    PersonCard(),
+    PersonPage(),
   ];
   @override
   Widget build(BuildContext context) {
